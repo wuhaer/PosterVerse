@@ -1,2 +1,2 @@
 # PosterVerse
-Code and dataset will coming soon!
+Code and dataset will be coming soon!
