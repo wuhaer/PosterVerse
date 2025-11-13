@@ -8,7 +8,7 @@ The code and dataset should be used and distributed under [ (CC BY-NC-ND 4.0)](h
 ## ✒️Citation
 If you find PosterVerse helpful, please consider giving this repo a ⭐ and citing:
 ```latex
-@inproceedings{Liu2026autohdr,
+@inproceedings{Liu2026posterverse,
       title={PosterVerse: A Full-Workflow Framework for Commercial-Grade Poster Generation with HTML-Based Scalable Typography}, 
       author={Junle Liu, Peirong Zhang, Yuyi Zhang, Pengyu Yan, Hui Zhou, Xinyue Zhou, Fengjun Guo, Lianwen Jin},
       journal={Proceedings of the AAAI Conference on Artificial Intelligence},
