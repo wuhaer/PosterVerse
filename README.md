@@ -1,6 +1,6 @@
 <div align=center>
 
-# PosterVerse: A Full-Workflow Framework for Commercial-Grade Poster Generation with HTML-Based Scalable Typography
+# [AAAI 2026 Oral] PosterVerse: A Full-Workflow Framework for Commercial-Grade Poster Generation with HTML-Based Scalable Typography
 
 </div>
 
