@@ -73,3 +73,6 @@ Thanks for your support!
 ![Vis_4](fig/show1.png)
 ![Vis_5](fig/show2.png)
 ![Vis_6](fig/show3.png)
+
+## ⭐ Star Rising
+[![Star Rising](https://api.star-history.com/svg?repos=wuhaer/PosterVerse&type=Timeline)](https://star-history.com/#wuhaer/PosterVerse&Timeline)
