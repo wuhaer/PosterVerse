@@ -29,10 +29,11 @@
 - [ ] Upload pretrained model to Hugging Face
 
 ## 🔥 Model Zoo
-| **Model**                                    | **Checkpoint** | **Status** |
+| **Stage**    | **Checkpoint** | **Status** |
 |----------------------------------------------|----------------|------------|
-| --                   | -- | Coming soon  |
-| --                   | -- | Coming soon  |
+| Blueprint Creation   | -- | Coming soon  |
+| Graphical Background Generation | -- | Coming soon  |
+|Unified Layout-Text Rendering | -- | Coming soon  |
 
 
 ## 💙 Acknowledgement
