@@ -4,6 +4,18 @@
 
 </div>
 
+## 🌟 Highlights
+- **PosterVerse**
+![Vis_1](fig/posterverse_pipeline.png)
+- **PosterDNA**
+![Vis_2](fig/dataset.png)
+
+- We propose **PosterVerse**, a full-workflow method that integrates blueprint creation, graphical background generation, and unified layout-text rendering, enabling the creation of posters with aesthetically sophisticated layouts and text-dense designs for commercial-grade use.
+- We propose **PosterDNA**, the first commercial-grade and text-dense poster generation dataset with fine-grained HTML-based specifications, designed to support modular training and validation with high-quality samples.
+- PosterVerse allows users to generate commercial-grade posters solely from textual prompts.
+- Extensive experiments demonstrate that PosterVerse can generate visually appealing posters with aesthetic designs, precise text, and well-crafted layouts, meeting the standards of commercial-grade posters.
+
+
 ## 📅 News
 - **2026.01.08**: Our [paper](https://arxiv.org/abs/2601.03993) is now available on arXiv.
 - **2025.11.08**: 🎉🎉 Our [paper](https://arxiv.org/abs/2601.03993) is accepted by AAAI Oral.
