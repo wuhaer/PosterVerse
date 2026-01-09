@@ -15,6 +15,8 @@
 - PosterVerse allows users to generate commercial-grade posters solely from textual prompts.
 - Extensive experiments demonstrate that PosterVerse can generate visually appealing posters with aesthetic designs, precise text, and well-crafted layouts, meeting the standards of commercial-grade posters.
 
+## 📏 Evaluation Result
+![Vis_7](fig/eval.png)
 
 ## 📅 News
 - **2026.01.08**: Our [paper](https://arxiv.org/abs/2601.03993) is now available on arXiv.
@@ -46,18 +48,13 @@ If you have any questions, feel free to contact [Junle Liu](https://github.com/w
 
 
 ## 📜 License
-The code and dataset should be used and distributed under [ (CC BY-NC-ND 4.0)](https://creativecommons.org/licenses/by-nc-nd/4.0/) for non-commercial research purposes.
+The code and dataset should be used and distributed under [(CC BY-NC-ND 4.0)](https://creativecommons.org/licenses/by-nc-nd/4.0/) for non-commercial research purposes.
 
 ## ⛔️ Copyright
 - This repository can only be used for non-commercial research purposes.
 - For commercial use, please contact Prof. Lianwen Jin (eelwjin@scut.edu.cn).
 - Copyright 2026, [Deep Learning and Vision Computing Lab (DLVC-Lab)](http://www.dlvc-lab.net), South China University of Technology. 
 
-## 🌄 Gallery
-![Vis_3](fig/show.png)
-![Vis_4](fig/show1.png)
-![Vis_5](fig/show2.png)
-![Vis_6](fig/show3.png)
 
 ## ✒️Citation
 If you find PosterVerse helpful, please consider giving this repo a ⭐ and citing:
@@ -70,3 +67,9 @@ If you find PosterVerse helpful, please consider giving this repo a ⭐ and citi
 }
 ```
 Thanks for your support!
+
+## 🌄 Gallery
+![Vis_3](fig/show.png)
+![Vis_4](fig/show1.png)
+![Vis_5](fig/show2.png)
+![Vis_6](fig/show3.png)
