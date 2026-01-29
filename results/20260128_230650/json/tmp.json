@@ -1,0 +1,60 @@
+{
+    "theme": [
+        "立春节气祝福"
+    ],
+    "element": [
+        "树叶",
+        "樱花",
+        "卡通古装人物",
+        "蝴蝶",
+        "树枝",
+        "月亮"
+    ],
+    "color": [
+        "#90EE90",
+        "#FFB7C5",
+        "#F5DEB3"
+    ],
+    "style": [
+        "清新唯美风",
+        "插画风"
+    ],
+    "application": [
+        "节日祝福",
+        "节气宣传"
+    ],
+    "description-simple": {
+        "cn": "清新绿色背景配以樱花和古风人物。",
+        "en": "Fresh green background with cherry blossoms and traditional Chinese style character."
+    },
+    "description-medium": {
+        "cn": "淡雅的绿色背景上点缀着粉色樱花，画面右侧有一个古风卡通人物，配以蝴蝶和月亮装饰。",
+        "en": "A delicate green background decorated with pink cherry blossoms, featuring a traditional Chinese cartoon character on the right, adorned with butterflies and moon decorations."
+    },
+    "description-hard": {
+        "cn": "以清新的浅绿色为背景，画面上方点缀着粉色樱花枝条，飘落的花瓣营造春意盎然的氛围。右侧是一个穿着黄色古装的卡通人物形象，头戴发饰。画面点缀着白色蝴蝶、圆月等元素，整体构图疏密有致，层次分明，充满春天的生机与诗意。",
+        "en": "The poster features a fresh light green background adorned with pink cherry blossom branches at the top, with falling petals creating a vibrant spring atmosphere. On the right is a cartoon character wearing traditional yellow Chinese costume with hair ornaments. The scene is decorated with white butterflies, a round moon, and other elements. The overall composition is well-balanced with clear layers, full of spring vitality and poetic beauty."
+    },
+    "width": 1080,
+    "height": 1920,
+    "caption": {
+        "cn": "以清新的浅绿色为主调的插画背景，上方点缀着粉色樱花枝条，伴随着飘落的花瓣营造出浓郁的春季氛围。背景中还融入了白色蝴蝶和圆月等传统元素，层次分明且疏密有致，整体画面充满东方诗意和生机盎然的春意。细腻的绘画风格和柔和的色彩过渡展现出精致的艺术感。",
+        "en": "The illustrated background features a refreshing light green tone, adorned with pink cherry blossom branches at the top and falling petals that create a rich spring atmosphere. Traditional elements such as white butterflies and a round moon are integrated into the background, with clear layering and balanced composition. The overall scene is filled with Eastern poetic charm and vibrant spring energy. The delicate painting style and soft color transitions demonstrate an exquisite artistic sensibility."
+    },
+    "classification": "Illustration",
+    "text": {
+        "title": [
+            "立春"
+        ],
+        "subtitle": [
+            "节气"
+        ],
+        "content": [
+            "立春昨夜伴春风，",
+            "梦到花枝月午。",
+            "说与家人迎拜，",
+            "明年燕子来时。"
+        ],
+        "contact": []
+    }
+}
