@@ -472,8 +472,6 @@ def main(grade):
     timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
     save_paths = f'./results/{timestamp}'
 
-    request_prompt = "求一张立春节气的祝福海报哦。"
-    request_prompt = "有没有一款清新风格的立春节气海报？主色调为绿色，融入春天元素，最好是手绘插画风格。"
     request_prompt = "能不能给我来一张以绿色为主色调、画布大小1080×1920的立春节气海报？风格清新唯美，画面要有树叶、樱花、古风人物等元素。主标题“立春”，配上古诗文案，营造春意盎然的感觉，体现出节气特点，展示春天的美好。"
     # 单GPU处理
     process_batch(request_prompt, args, save_paths, model_path, grade)

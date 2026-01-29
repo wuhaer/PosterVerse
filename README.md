@@ -19,12 +19,14 @@
 ![Vis_7](fig/eval.png)
 
 ## 📅 News
+
+- **2026.01.29**: Release the inference code.
 - **2026.01.08**: Our [paper](https://arxiv.org/abs/2601.03993) is now available on arXiv.
 - **2025.11.08**: 🎉🎉 Our [paper](https://arxiv.org/abs/2601.03993) is accepted by AAAI Oral.
 
 ## 🚧 TODO List
 
-- [ ] Release inference code
+- [x] Release inference code
 - [ ] Release pretrained model
 - [ ] Release a WebUI
 - [ ] Release dataset
@@ -37,6 +39,37 @@
 | Graphical Background Generation | -- | Coming soon  |
 |Unified Layout-Text Rendering | -- | Coming soon  |
 
+## 🚧 Installation
+
+### Environment Setup
+Clone this repo:
+```bash
+git clone https://github.com/wuhaer/PosterVerse.git
+```
+
+**Step 0**: Download and install Miniconda from the [official website](https://docs.conda.io/en/latest/miniconda.html).
+
+**Step 1**: Create a conda environment and activate it.
+```bash
+conda create -n posterverse python=3.10 -y
+conda activate posterverse
+```
+
+**Step 2**: Install the required packages.
+```bash
+pip install -r requirements.txt
+```
+
+## 📺 Inference
+
+**Step 0**: Download all model files from the [Model Zoo](#-model-zoo) 
+
+**Step 1**: Download the Flux.1 dev model from the [Flux](#-model-zoo) 
+
+**Step 2**: Using PosterVerse to generate posters:
+```bash
+CUDA_VISIBLE_DEVICES=<gpu_id> python pipe_infer.py
+```
 
 ## 💙 Acknowledgement
 - [Qwen](https://github.com/QwenLM/Qwen3)
