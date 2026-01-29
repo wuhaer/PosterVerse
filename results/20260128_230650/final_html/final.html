@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+
+<html lang="zh">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>立春节气海报</title>
+<style>
+      @import url('https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=Noto+Serif+SC:wght@400;700;900&family=ZCOOL+XiaoWei&family=ZCOOL+QingKe+HuangYou&display=swap');
+      
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      
+      body {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #f5f5f5;
+        font-family: "Noto Serif SC", "Microsoft YaHei", serif;
+      }
+      
+      .poster-container {
+        position: relative;
+        width: 1080px;
+        height: 1920px;
+        background-image: url('/results/20260128_230650/background_images/tmp.png');
+        background-size: cover;
+        background-position: center;
+        overflow: hidden;
+      }
+      
+      .title {
+        position: absolute;
+        left: 100px;
+        top: 300px;
+        font-size: 180px;
+        font-weight: 900;
+        font-family: 'Ma Shan Zheng', cursive;
+        color: transparent;
+        background: linear-gradient(135deg, #2E7D32 0%, #1B5E20 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        line-height: 1.2;
+        writing-mode: vertical-lr;
+        letter-spacing: 15px;
+        text-shadow: 3px 3px 6px rgba(255, 255, 255, 0.3);
+      }
+      
+      .subtitle {
+        position: absolute;
+        left: 310px;
+        top: 380px;
+        font-size: 60px;
+        font-family: 'ZCOOL XiaoWei', serif;
+        color: #fff;
+        background-color: #FF9800;
+        padding: 10px 20px;
+        border-radius: 10px;
+        transform: rotate(-5deg);
+        box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+        letter-spacing: 2px;
+        font-weight: 700;
+      }
+      
+      .content {
+        position: absolute;
+        right: 100px;
+        top: 500px;
+        font-size: 36px;
+        font-family: 'ZCOOL QingKe HuangYou', sans-serif;
+        color: #1A1A1A;
+        writing-mode: vertical-rl;
+        line-height: 2.2;
+        letter-spacing: 8px;
+        text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5);
+      }
+      
+      .content p {
+        margin-left: 60px;
+        margin-bottom: 15px;
+      }
+      
+      .decorative-element {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+      }
+      
+      .flower-petal {
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        background-color: #FFC107;
+        border-radius: 50% 0 50% 0;
+        opacity: 0.7;
+        animation: falling 10s linear infinite;
+      }
+      
+      @keyframes falling {
+        0% {
+          transform: translateY(-100px) rotate(0deg);
+          opacity: 0.7;
+        }
+        100% {
+          transform: translateY(2000px) rotate(360deg);
+          opacity: 0;
+        }
+      }
+      
+      .butterfly {
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        background-color: #FFF5FC;
+        border-radius: 50% 0 50% 0;
+        opacity: 0.8;
+        animation: fluttering 8s ease-in-out infinite;
+      }
+      
+      @keyframes fluttering {
+        0%, 100% {
+          transform: translateY(0) rotate(0deg);
+        }
+        25% {
+          transform: translateY(-15px) rotate(10deg);
+        }
+        50% {
+          transform: translateY(15px) rotate(-5deg);
+        }
+        75% {
+          transform: translateY(-15px) rotate(5deg);
+        }
+      }
+    </style>
+</head>
+<body>
+<div class="poster-container">
+<div class="title">立春</div>
+<div class="subtitle">节气</div>
+<div class="content">
+<p>立春昨夜伴春风，</p>
+<p>梦到花枝月午。</p>
+<p>说与家人迎拜，</p>
+<p>明年燕子来时。</p>
+</div>
+<!-- Decorative elements -->
+<div class="decorative-element">
+<div class="flower-petal" style="top: 15%; left: 20%; animation-delay: 1s;"></div>
+<div class="flower-petal" style="top: 25%; left: 80%; animation-delay: 2s;"></div>
+<div class="flower-petal" style="top: 40%; left: 30%; animation-delay: 3s;"></div>
+<div class="flower-petal" style="top: 60%; left: 70%; animation-delay: 4s;"></div>
+<div class="flower-petal" style="top: 75%; left: 50%; animation-delay: 5s;"></div>
+<div class="flower-petal" style="top: 10%; left: 60%; animation-delay: 6s;"></div>
+<div class="flower-petal" style="top: 30%; left: 40%; animation-delay: 7s;"></div>
+<div class="flower-petal" style="top: 50%; left: 25%; animation-delay: 8s;"></div>
+<div class="flower-petal" style="top: 70%; left: 75%; animation-delay: 9s;"></div>
+<div class="flower-petal" style="top: 20%; left: 85%; animation-delay: 2s;"></div>
+<div class="flower-petal" style="top: 65%; left: 35%; animation-delay: 3s;"></div>
+<div class="flower-petal" style="top: 80%; left: 55%; animation-delay: 4s;"></div>
+<div class="butterfly" style="top: 35%; left: 20%; animation-delay: 1.5s;"></div>
+<div class="butterfly" style="top: 45%; left: 80%; animation-delay: 2.5s;"></div>
+<div class="butterfly" style="top: 60%; left: 30%; animation-delay: 3.5s;"></div>
+<div class="butterfly" style="top: 75%; left: 70%; animation-delay: 4.5s;"></div>
+<div class="butterfly" style="top: 25%; left: 50%; animation-delay: 5.5s;"></div>
+<div class="butterfly" style="top: 55%; left: 10%; animation-delay: 6.5s;"></div>
+<div class="butterfly" style="top: 70%; left: 40%; animation-delay: 7.5s;"></div>
+<div class="butterfly" style="top: 30%; left: 80%; animation-delay: 8.5s;"></div>
+</div>
+</div>
+</body>
+</html>
