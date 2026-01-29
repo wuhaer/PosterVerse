@@ -1,3 +1,12 @@
+"""
+PosterVerse
+===========================
+
+- Stage 1: Blueprint Creation
+- Stage 2: Graphical Background Generation
+- Stage 3: Unified Layout-Text Rendering
+"""
+
 import json
 import torch
 from transformers import AutoTokenizer, AutoModelForCausalLM
@@ -155,11 +164,17 @@ def create_argparser():
     parser.add_argument(
         "--json_file", type=str, default=None, help="Path to save"
     )
+    parser.add_argument('--request_prompt', type=str, 
+                        default="",
+                        help='Path to the model directory or name')
     parser.add_argument('--stage3_model_path', type=str, 
                         default="",
                         help='Path to the model directory or name')
+    parser.add_argument('--stage1_model_path', type=str, 
+                        default="",
+                        help='Path to the model directory or name')
     parser.add_argument('--input_file', type=str, 
-                        default="/juicefs-algorithm/data/IPT/junle_liu/layout/Train/test_data/poster_data_test1.json",
+                        default="",
                         help='Path to the input dataset JSON file')
     parser.add_argument('--output_dir', type=str, 
                         default="./html_generation_results",
@@ -180,18 +195,26 @@ def create_argparser():
 
 
 def extract_html_from_response(response_text):
-    """从模型响应中提取HTML代码"""
-    # 尝试提取代码块
+    """
+    Extract HTML code from model response.
+    
+    Args:
+        response_text: Raw response text from model
+        
+    Returns:
+        Extracted HTML code
+    """
+    # Try to extract from code block
     html_match = re.search(r'```(?:html)?\s*(<!DOCTYPE.+?|<html.+?)\s*```', response_text, re.DOTALL)
     if html_match:
         return html_match.group(1)
     
-    # 如果没有代码块格式，尝试直接提取HTML
+    # Try to extract raw HTML
     html_match = re.search(r'(<!DOCTYPE.+?<\/html>|<html.+?<\/html>)', response_text, re.DOTALL)
     if html_match:
         return html_match.group(1)
     
-    # 如果没有找到标准HTML，返回整个响应
+    # Return entire response if no HTML found
     return response_text
 
 class PosterEvaluator:
@@ -211,7 +234,15 @@ class PosterEvaluator:
         logger.info("Model loaded successfully")
 
     def extract_prompts(self, input_file: str) -> List[Dict]:
-        """提取测试数据中的user prompts"""
+        """
+        Extract user prompts from test data file.
+        
+        Args:
+            input_file: Path to input JSON file
+            
+        Returns:
+            List of prompt dictionaries
+        """
         prompts = []
         with open(input_file, 'r', encoding='utf-8') as f:
             for line in f:
@@ -234,7 +265,15 @@ class PosterEvaluator:
         return prompts
 
     def generate_response(self, prompt: str) -> str:
-        """生成模型响应"""
+        """
+        Generate model response for given prompt.
+        
+        Args:
+            prompt: User input prompt
+            
+        Returns:
+            Generated response text
+        """
         prompt = f"{prompt}"
         model_inputs = self.tokenizer(prompt, return_tensors="pt").to(self.device)
         
@@ -254,7 +293,16 @@ class PosterEvaluator:
         return response
 
     def run(self, prompts: str):
-        """运行完整的评估流程"""
+        """
+        Run the complete evaluation process with retry logic.
+        
+        Args:
+            prompts: User input prompt
+            
+        Returns:
+            Dictionary containing prompt and structured response
+        """
+
         count = 0
         is_valid_json = False
         has_all_keys = None
@@ -268,20 +316,20 @@ class PosterEvaluator:
                 count += 1
                 generated_json = None
 
-                # 生成响应
+                # Generate response
                 response = self.generate_response(prompts)
 
                 if not response:
                     print(f"Attempt {count}: Empty response received")
                     continue
                 
-                # 检查是否是重复的响应
+                # Check for duplicate responses
                 if response in previous_responses:
                     print(f"Attempt {count}: Duplicate response received")
                     continue
                 previous_responses.add(response)
 
-                # 尝试解析JSON
+                # Extract and validate JSON
                 if response.find('{') != -1 and response.find('}') != -1:
                     json_start = response.find('{')
                     json_end = None
@@ -319,7 +367,7 @@ class PosterEvaluator:
                         print(f'Success \n{response} \n\n{json_str}\n\n\n\n Success End')
                         break
                         
-                print(f"正在尝试第{count}次 \n{generated_json} \n{json_str}")
+                print(f"Attempting {count} time(s) \n{generated_json} \n{json_str}")
 
             except:
                 print(f"Attempt {count}: Failed to generate valid JSON")
@@ -343,12 +391,24 @@ class PosterEvaluator:
         }
 
         return complete_output
-                    
-
+                
 
 
 def process_batch(request_prompt, args, save_paths, model_path, grade):
-    """单GPU处理函数"""
+    """
+    Process a single batch through the complete pipeline.
+    
+    Pipeline stages:
+    1. Blueprint Creation (Stage 1 model)
+    2. Graphical Background Generation (Stage 2)
+    3. Unified Layout-Text Rendering (Stage 3 model)
+    
+    Args:
+        request_prompt: User's natural language prompt
+        args: Configuration arguments
+        save_paths: Base path for saving outputs
+        stage1_model_path: Path to Stage 1 model
+    """
     
     classification_dict = {
         "Illustration":"Design",
@@ -357,28 +417,34 @@ def process_batch(request_prompt, args, save_paths, model_path, grade):
         "Design":"Design",
     }
 
-    # 创建目录
+    # Create output directories
     if not os.path.exists(save_paths):
         os.makedirs(save_paths)
         os.makedirs(os.path.join(save_paths, 'final_html'))
         os.makedirs(os.path.join(save_paths, 'background_images'))
         os.makedirs(os.path.join(save_paths, 'json'))
 
-    # 设置设备
+    # Setup device
     device = torch.device(f'cuda:{args.gpu_id}')
     torch.cuda.set_device(device)
 
 
     try:
         
-        # 初始化evaluator
+        # ============================================================================
+        # Stage 1: Blueprint Creation
+        # ============================================================================
+        logger.info("=" * 60)
+        logger.info("Stage 1: Blueprint Creation")
+        logger.info("=" * 60)
+
         evaluator = PosterEvaluator(model_path, device)
         complete_output = evaluator.run(request_prompt)
         
         del evaluator
         torch.cuda.empty_cache()
 
-        # 保存JSON
+        # Save Blueprint Creation
         json_file = os.path.join(save_paths, 'json')
         os.makedirs(json_file, exist_ok=True)
         
@@ -388,7 +454,13 @@ def process_batch(request_prompt, args, save_paths, model_path, grade):
 
         prompt = complete_output['response']['caption']['en']
 
-        # 初始化pipeline
+        # ====================================================================
+        # Stage 2: Graphical Background Generation
+        # ====================================================================
+        logger.info("=" * 60)
+        logger.info("Stage 2: Graphical Background Generation")
+        logger.info("=" * 60)
+
         args.device = device
         xflux_pipeline = XFluxPipeline(args.model_type, args.device, args.offload) 
         
@@ -397,17 +469,24 @@ def process_batch(request_prompt, args, save_paths, model_path, grade):
         args.lora_path = f'{args.lora_local_path}/{classification_type}-lora.safetensors'
         images = img_gen(prompt, args, xflux_pipeline)
 
+        # Cleanup Stage 2 pipeline
         del xflux_pipeline
         torch.cuda.empty_cache()
 
-        # 保存图片
+        # Save generated image
         images_file = os.path.join(save_paths, 'background_images')
         os.makedirs(images_file, exist_ok=True)
 
         gen_image_path = f'{images_file}/tmp.png'
         images.save(gen_image_path)
         
-        # 生成HTML
+        # ====================================================================
+        # Stage 3: Unified Layout-Text Rendering
+        # ====================================================================
+        logger.info("=" * 60)
+        logger.info("Stage 3: Unified Layout-Text Rendering")
+        logger.info("=" * 60)
+
         generator = PosterHTMLGenerator(
             model_path=args.stage3_model_path,
             device=device,
@@ -421,6 +500,7 @@ def process_batch(request_prompt, args, save_paths, model_path, grade):
 
         generator.model = generator.model.to(device)
 
+        # Prepare input data for HTML generation
         json_data = complete_output['response']
         theme = json_data.get('theme', '')
         element = json_data.get('element', '')
@@ -448,11 +528,14 @@ def process_batch(request_prompt, args, save_paths, model_path, grade):
 
         user_prompt = f"请分析图片并根据提供的海报基调和文案内容，生成一个HTML文件实现最佳视觉排版效果。\n```json\n{input_json_str}\n```"
 
+        # Generate HTML
         html_content, response = generator.generate_html(images, user_prompt)
+
+        # Cleanup Stage 3 model
         del generator
         torch.cuda.empty_cache()
 
-        # 保存HTML
+        # Save HTML output
         html_file = os.path.join(save_paths, 'final_html')
         os.makedirs(html_file, exist_ok=True)
 
@@ -465,16 +548,9 @@ def process_batch(request_prompt, args, save_paths, model_path, grade):
 
 def main(grade):
     args = create_argparser().parse_args()
-
-    model_path = "/juicefs-algorithm/data/IPT/junle_liu/slurm/slurm-result/llama-factory/intension/Qwen2.5-14B-Instruct/20250710/lr1e-5"
-    args.stage3_model_path = '/juicefs-algorithm/data/IPT/junle_liu/slurm/slurm-result/llama-factory/layout/Qwen2.5-VL-7B-Instruct/20250715'
-    args.lora_local_path = 'lora_model'
     timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
     save_paths = f'./results/{timestamp}'
-
-    request_prompt = "能不能给我来一张以绿色为主色调、画布大小1080×1920的立春节气海报？风格清新唯美，画面要有树叶、樱花、古风人物等元素。主标题“立春”，配上古诗文案，营造春意盎然的感觉，体现出节气特点，展示春天的美好。"
-    # 单GPU处理
-    process_batch(request_prompt, args, save_paths, model_path, grade)
+    process_batch(args.request_prompt, args, save_paths, args.stage1_model_path, grade)
 
    
 if __name__ == "__main__":

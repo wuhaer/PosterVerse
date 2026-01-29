@@ -64,14 +64,20 @@ pip install -r requirements.txt
 
 **Step 0**: Download all model files from the [Model Zoo](#-model-zoo) 
 
-**Step 1**: Download the Flux.1 dev model from the [Flux](#-model-zoo) 
+**Step 1**: Download the [Flux.1 dev](https://hf-mirror.com/black-forest-labs/FLUX.1-dev) model
 
 **Step 2**: Using PosterVerse to generate posters:
+
 ```bash
-CUDA_VISIBLE_DEVICES=<gpu_id> python pipe_infer.py
+CUDA_VISIBLE_DEVICES=<gpu_id> python pipe_infer.py \
+--stage1_model_path /path/to/Blueprint Creation/model \
+--stage3_model_path /path/to/Unified Layout-Text Rendering/model \
+--lora_local_path lora_model \
+--request_prompt '能不能给我来一张以绿色为主色调、画布大小1080×1920的立春节气海报？风格清新唯美，画面要有树叶、樱花、古风人物等元素。主标题"立春"，配上古诗文案，营造春意盎然的感觉，体现出节气特点，展示春天的美好。'
 ```
 
 ## 💙 Acknowledgement
+- [xflux](https://github.com/XLabs-AI/x-flux)
 - [Qwen](https://github.com/QwenLM/Qwen3)
 - [diffusers](https://github.com/huggingface/diffusers)
 
