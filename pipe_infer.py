@@ -549,7 +549,7 @@ def process_batch(request_prompt, args, save_paths, model_path, grade):
 def main(grade):
     args = create_argparser().parse_args()
     timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
-    save_paths = f'./results/{timestamp}'
+    save_paths = f'results/{timestamp}'
     process_batch(args.request_prompt, args, save_paths, args.stage1_model_path, grade)
 
    
