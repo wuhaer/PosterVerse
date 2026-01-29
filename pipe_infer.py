@@ -351,10 +351,10 @@ def process_batch(request_prompt, args, save_paths, model_path, grade):
     """单GPU处理函数"""
     
     classification_dict = {
-        "Illustration":"./Design",
-        "Real":"./Real",
-        "Pure":"./Pure",
-        "Design":"./Design",
+        "Illustration":"Design",
+        "Real":"Real",
+        "Pure":"Pure",
+        "Design":"Design",
     }
 
     # 创建目录
