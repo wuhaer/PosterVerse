@@ -15,7 +15,7 @@ from optimum.quanto import requantize
 from .model import Flux, FluxParams
 from .controlnet import ControlNetFlux
 from .modules.autoencoder import AutoEncoder, AutoEncoderParams
-from .modules.conditioner import HFEmbedder, HFEmbedder_V2
+from .modules.conditioner import HFEmbedder
 from .annotator.dwpose import DWposeDetector
 from .annotator.mlsd import MLSDdetector
 from .annotator.canny import CannyDetector
@@ -169,8 +169,7 @@ configs = {
         repo_id_ae="black-forest-labs/FLUX.1-dev",
         repo_flow="flux1-dev.safetensors",
         repo_ae="ae.safetensors",
-        # ckpt_path=os.getenv("FLUX_DEV"),
-        ckpt_path="/juicefs-algorithm/data/IPT/xinyue_zhou/Pretrained_models/T2I/flux/black-forest-labs/FLUX.1-dev/flux1-dev.sft",
+        ckpt_path=os.getenv("FLUX_DEV"),
         params=FluxParams(
             in_channels=64,
             vec_in_dim=768,
@@ -185,8 +184,7 @@ configs = {
             qkv_bias=True,
             guidance_embed=True,
         ),
-        # ae_path=os.getenv("AE"),
-        ae_path="/juicefs-algorithm/data/IPT/xinyue_zhou/Pretrained_models/T2I/flux/black-forest-labs/FLUX.1-dev/ae.sft",
+        ae_path=os.getenv("AE"),
         ae_params=AutoEncoderParams(
             resolution=256,
             in_channels=3,
@@ -362,29 +360,12 @@ def load_controlnet(name, device, transformer=None):
         controlnet.load_state_dict(transformer.state_dict(), strict=False)
     return controlnet
 
-# def load_t5(device: str | torch.device = "cuda", max_length: int = 512) -> HFEmbedder:
-#     # max length 64, 128, 256 and 512 should work (if your sequence is short enough)
-#     return HFEmbedder("xlabs-ai/xflux_text_encoders", max_length=max_length, torch_dtype=torch.bfloat16).to(device)
-
-# def load_clip(device: str | torch.device = "cuda") -> HFEmbedder:
-#     return HFEmbedder("openai/clip-vit-large-patch14", max_length=77, torch_dtype=torch.bfloat16).to(device)
-
-
 def load_t5(device: str | torch.device = "cuda", max_length: int = 512) -> HFEmbedder:
     # max length 64, 128, 256 and 512 should work (if your sequence is short enough)
-    # return HFEmbedder("xlabs-ai/xflux_text_encoders", max_length=max_length, torch_dtype=torch.bfloat16).to(device)
-    tokenizer_path = "/juicefs-algorithm/data/IPT/xinyue_zhou/Pretrained_models/T2I/flux/black-forest-labs/FLUX.1-dev/tokenizer_2/"
-    textmodel_path = "/juicefs-algorithm/data/IPT/xinyue_zhou/Pretrained_models/T2I/flux/black-forest-labs/FLUX.1-dev/text_encoder_2/"
-    
-    return HFEmbedder_V2(tokenizer_path, textmodel_path, max_length=max_length, torch_dtype=torch.bfloat16).to(device)
-
+    return HFEmbedder("xlabs-ai/xflux_text_encoders", max_length=max_length, torch_dtype=torch.bfloat16).to(device)
 
 def load_clip(device: str | torch.device = "cuda") -> HFEmbedder:
-    # return HFEmbedder("openai/clip-vit-large-patch14", max_length=77, torch_dtype=torch.bfloat16).to(device)
-    tokenizer_path = "/juicefs-algorithm/data/IPT/xinyue_zhou/Pretrained_models/T2I/flux/black-forest-labs/FLUX.1-dev/tokenizer/"
-    textmodel_path = "/juicefs-algorithm/data/IPT/xinyue_zhou/Pretrained_models/T2I/flux/black-forest-labs/FLUX.1-dev/text_encoder/"
-    
-    return HFEmbedder_V2(tokenizer_path, textmodel_path, max_length=77, torch_dtype=torch.bfloat16).to(device)
+    return HFEmbedder("openai/clip-vit-large-patch14", max_length=77, torch_dtype=torch.bfloat16).to(device)
 
 
 def load_ae(name: str, device: str | torch.device = "cuda", hf_download: bool = True) -> AutoEncoder:
