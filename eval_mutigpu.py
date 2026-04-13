@@ -286,10 +286,10 @@ def parse_args():
     """解析命令行参数"""
     parser = argparse.ArgumentParser(description='Multi-GPU HTML Poster Generation with Qwen2.5VL')
     parser.add_argument('--model_path', type=str, 
-                        default="/juicefs-algorithm/data/IPT/junle_liu/slurm/slurm-result/llama-factory/layout/Qwen2.5-VL-7B-Instruct/20250507",
+                        default="/path/to/htmlgenerationmodel",
                         help='Path to the model directory or name')
     parser.add_argument('--input_file', type=str, 
-                        default="/juicefs-algorithm/data/IPT/junle_liu/layout/Train/test_data/poster_data_test1.json",
+                        default="/path/to/json",
                         help='Path to the input dataset JSON file')
     parser.add_argument('--output_dir', type=str, 
                         default="./html_generation_results",
