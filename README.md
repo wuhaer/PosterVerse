@@ -36,7 +36,7 @@
 | **Stage**    | **Checkpoint** | **Status** |
 |----------------------------------------------|----------------|------------|
 | Blueprint Creation   |  [BaiduYun:CZWV](https://pan.baidu.com/s/1EknntmUiM407ynD6m5tiaQ?pwd=CZWV ) | Released  |
-| Graphical Background Generation | -- | Coming soon  |
+| Graphical Background Generation | [BaiduYun:s47v](https://pan.baidu.com/s/1R6p9dwxqT4E4eKMFn-pzBw?pwd=s47v) | Released  |
 |Unified Layout-Text Rendering | [BaiduYun:4G6s](https://pan.baidu.com/s/1EqZdWYdLtS5Tqp3OPs5FYA?pwd=4G6s ) | Released  |
 
 ## 🔥 PosterDNA Dataset
