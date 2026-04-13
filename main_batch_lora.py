@@ -65,7 +65,7 @@ def create_argparser():
         help="A LoRA filename to download from HuggingFace"
     )
     parser.add_argument(
-        "--lora_path", type=str, default='/juicefs-algorithm/data/IPT/junle_liu/slurm/slurm-result/lora/flux/x-flux-lora/20250224/lora/background/image/20250224-lr5e-4-rank64/插画_6_all/checkpoint-11740/lora.safetensors',
+        "--lora_path", type=str, default='/path/to/lora',
         help="Local path to the model checkpoint (Controlnet)"
     )
     parser.add_argument(
