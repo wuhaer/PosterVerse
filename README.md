@@ -35,9 +35,9 @@
 ## 🔥 Model Zoo
 | **Stage**    | **Checkpoint** | **Status** |
 |----------------------------------------------|----------------|------------|
-| Blueprint Creation   | -- | Coming soon  |
+| Blueprint Creation   |  [BaiduYun:CZWV](https://pan.baidu.com/s/1EknntmUiM407ynD6m5tiaQ?pwd=CZWV ) | Released  |
 | Graphical Background Generation | -- | Coming soon  |
-|Unified Layout-Text Rendering | -- | Coming soon  |
+|Unified Layout-Text Rendering | [BaiduYun:4G6s](https://pan.baidu.com/s/1EqZdWYdLtS5Tqp3OPs5FYA?pwd=4G6s ) | Released  |
 
 ## 🚧 Installation
 
