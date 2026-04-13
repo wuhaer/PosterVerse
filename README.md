@@ -39,6 +39,23 @@
 | Graphical Background Generation | -- | Coming soon  |
 |Unified Layout-Text Rendering | [BaiduYun:4G6s](https://pan.baidu.com/s/1EqZdWYdLtS5Tqp3OPs5FYA?pwd=4G6s ) | Released  |
 
+## 🔥 PosterDNA Dataset
+| **Dataset**             | **Link** | **status** |
+|----------|----------|-------------|
+| PosterDNA | [BaiduYun:2112](https://pan.baidu.com/s/1I8x9vqdmHAxzVv4Y03x9Aw?pwd=2112) | Released |
+
+**Note:**
+- The PosterDNA dataset can only be used for non-commercial research purposes. For scholar or organization who wants to use the PosterDNA dataset, you can apply through either of the following two options:
+
+  **Option A: Apply Online**
+  Submit your application through our online platform: 👉 [Apply Here](http://121.41.49.212:9000/)
+
+  **Option B: Apply via Email**
+  Please first fill in this [Application Form](./application-form/Application-Form-for-Using-PosterDNA.docx) and sign the [Legal Commitment](./application-form/Legal-Commitment.docx) and email them to us ([eelwjin@scut.edu.cn](mailto:eelwjin@scut.edu.cn), cc: [yuyi.zhang11@foxmail.com](mailto:yuyi.zhang11@foxmail.com)). When submitting the application form to us, please list or attached 1-2 of your publications in the recent 6 years to indicate that you (or your team) do research in the related research fields of OCR, historical document analysis and restoration, document image processing, and so on.
+
+- We will give you the decompression password after your application has been received and approved.
+- All users must follow all use conditions; otherwise, the authorization will be revoked.
+
 ## 🚧 Installation
 
 ### Environment Setup
