@@ -51,7 +51,7 @@
   Submit your application through our online platform: 👉 [Apply Here](http://121.41.49.212:9000/)
 
   **Option B: Apply via Email**
-  Please first fill in this [Application Form](./application-form/Application-Form-for-Using-PosterDNA.docx) and sign the [Legal Commitment](./application-form/Legal-Commitment.docx) and email them to us ([eelwjin@scut.edu.cn](mailto:eelwjin@scut.edu.cn)). When submitting the application form to us, please list or attached 1-2 of your publications in the recent 6 years to indicate that you (or your team) do research in the related research fields of OCR, historical document analysis and restoration, document image processing, and so on.
+  Please first fill in this [Application Form](./application-form/Application-Form-for-Using-PosterDNA.docx) and sign the [Legal Commitment](./application-form/Legal-Commitment.docx) and email them to us ([eelwjin@scut.edu.cn](mailto:eelwjin@scut.edu.cn)). When submitting the application form to us, please list or attached 1-2 of your publications in the recent 6 years to indicate that you (or your team) do research in the related research fields of poster generation, layout design, font generation, and so on.
 
 - We will give you the decompression password after your application has been received and approved.
 - All users must follow all use conditions; otherwise, the authorization will be revoked.
