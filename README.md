@@ -27,9 +27,8 @@
 ## 🚧 TODO List
 
 - [x] Release inference code
-- [ ] Release pretrained model
-- [ ] Release a WebUI
-- [ ] Release dataset
+- [x] Release pretrained model
+- [x] Release dataset
 - [ ] Upload pretrained model to Hugging Face
 
 ## 🔥 Model Zoo
