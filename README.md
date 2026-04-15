@@ -19,7 +19,8 @@
 ![Vis_7](fig/eval.png)
 
 ## 📅 News
-
+- **2026.04.14**: Release the PosterDNA dataset.
+- **2026.04.14**: Release the pretrained model.
 - **2026.01.29**: Release the inference code.
 - **2026.01.08**: Our [paper](https://arxiv.org/abs/2601.03993) is now available on arXiv.
 - **2025.11.08**: 🎉🎉 Our [paper](https://arxiv.org/abs/2601.03993) is accepted by AAAI Oral.
