@@ -10,12 +10,6 @@
   <a href="https://huggingface.co/wuhaer/PosterVerse"><img alt="HuggingFace Paper" src="https://img.shields.io/badge/🤗_HuggingFace-FFBF00?labelColor=gray"></a>
   <a href="./LICENSE"><img alt="License" src="https://img.shields.io/badge/License-Apache_2.0-008844?logo=apache&logoColor=white&labelColor=gray"></a>
 <p></p>
-<img src="https://img.shields.io/github/stars/NiceRingNode/Awesome-Generative-Models-for-OCR?color=yellow" alt="Stars">
-<img src="https://img.shields.io/github/forks/NiceRingNode/Awesome-Generative-Models-for-OCR?color=yellow" alt="Forks">
-
-<p align="center">
-  <img src="asset/logo.png" width="450">
-</p>
 
 </div>
 
