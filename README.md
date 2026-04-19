@@ -30,19 +30,19 @@
 - [x] Release inference code
 - [x] Release pretrained model
 - [x] Release dataset
-- [ ] Upload pretrained model to Hugging Face
+- [x] Upload pretrained model to Hugging Face
 
 ## 🔥 Model Zoo
 | **Stage**    | **Checkpoint** | **Status** |
 |----------------------------------------------|----------------|------------|
-| Blueprint Creation   |  [BaiduYun:CZWV](https://pan.baidu.com/s/1EknntmUiM407ynD6m5tiaQ?pwd=CZWV ) | Released  |
-| Graphical Background Generation | [BaiduYun:s47v](https://pan.baidu.com/s/1R6p9dwxqT4E4eKMFn-pzBw?pwd=s47v) | Released  |
-|Unified Layout-Text Rendering | [BaiduYun:4G6s](https://pan.baidu.com/s/1EqZdWYdLtS5Tqp3OPs5FYA?pwd=4G6s ) | Released  |
+| Blueprint Creation   |  [BaiduYun:CZWV](https://pan.baidu.com/s/1EknntmUiM407ynD6m5tiaQ?pwd=CZWV ) / [Huggingface](https://huggingface.co/wuhaer/PosterVerse)| Released  |
+| Graphical Background Generation | [BaiduYun:s47v](https://pan.baidu.com/s/1R6p9dwxqT4E4eKMFn-pzBw?pwd=s47v) / [Huggingface](https://huggingface.co/wuhaer/PosterVerse) | Released  |
+|Unified Layout-Text Rendering | [BaiduYun:4G6s](https://pan.baidu.com/s/1EqZdWYdLtS5Tqp3OPs5FYA?pwd=4G6s ) / [Huggingface](https://huggingface.co/wuhaer/PosterVerse) | Released  |
 
 ## 🔥 PosterDNA Dataset
 | **Dataset**             | **Link** | **status** |
 |----------|----------|-------------|
-| PosterDNA | [BaiduYun:2112](https://pan.baidu.com/s/1I8x9vqdmHAxzVv4Y03x9Aw?pwd=2112) | Released |
+| PosterDNA | [BaiduYun:2112](https://pan.baidu.com/s/1I8x9vqdmHAxzVv4Y03x9Aw?pwd=2112) / [Huggingface](https://huggingface.co/wuhaer/PosterVerse) | Released |
 
 **Note:**
 - The PosterDNA dataset can only be used for non-commercial research purposes. For scholar or organization who wants to use the PosterDNA dataset, you can apply through either of the following two options:
