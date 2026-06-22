@@ -51,7 +51,7 @@
 | **Dataset**             | **Link** | **status** |
 |----------|----------|-------------|
 | PosterDNA | [BaiduYun:2112](https://pan.baidu.com/s/1I8x9vqdmHAxzVv4Y03x9Aw?pwd=2112) / [Huggingface](https://huggingface.co/wuhaer/PosterVerse) | Released |
-
+| Test-set | [BaiduYun:snrb](https://pan.baidu.com/s/19DQ1TP_aY_W1TUKCDPR2Dw) / [Huggingface](https://huggingface.co/wuhaer/PosterVerse) | Released |
 **Note:**
 - The PosterDNA dataset can only be used for non-commercial research purposes. For scholar or organization who wants to use the PosterDNA dataset, you can apply through either of the following two options:
 
